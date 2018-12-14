@@ -9,7 +9,12 @@ def masking(cipher_grille, ciphered_password):
     return passw
     
 def recall_password(cipher_grille, ciphered_password):
-    
+    for i in cipher_grille:
+        print(i)
+    print('\n')
+    for i in ciphered_password:
+        print(i)
+    print('\n')    
     sg1 = []
     for i in cipher_grille:
         sg1.append([j for j in i])
@@ -24,6 +29,7 @@ def recall_password(cipher_grille, ciphered_password):
     for i in password:
         for j in i:
             res.append(j)
+    print(''.join(res))
     return ''.join(res)
 
 
